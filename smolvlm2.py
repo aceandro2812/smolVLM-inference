@@ -53,8 +53,8 @@ except Exception as e:
    logging.error(f"Failed to load model: {e}")
    raise
 # Load the test image (consider making this dynamic)
-# image_path = r"C:\\Users\\gbsibot-3\\Desktop\\remmitslm\\smolVLM implementation\\images\\900853047 Invoice 0679017716_1.pdf_0.jpg"
-image_path = r"C:\\Users\\gbsibot-3\\Desktop\\remmitslm\\smolVLM implementation\\images\\Screenshot 2024-12-13 182051.png"
+# image_path = r""
+image_path = r""
 
 try:
    image1 = load_image(image_path)
@@ -72,7 +72,7 @@ messages = [
                "type": "text",
                "text": (
                    "Please extract the following information from the remittance advices and present it in JSON format: "
-                   "the company name (it will never be Mettler-Toledo), 9-digit invoice numbers (which may be single or multiple), "
+                   "the company name (it will never be ), 9-digit invoice numbers (which may be single or multiple), "
                    "the total amount stated in the document, and the currency used in the document along with individual amounts for each invoice number,the tax amount,Make sure to not bring dummy values , and just the values which are there in the image."
                )
            }
@@ -89,7 +89,7 @@ messages = [
 #                "text": (
 #                    "You are an intelligent document extraction assistant. Analyze the provided remittance advice image and extract "
 #                    "the following information in JSON format, ensuring accuracy and completeness:\n\n"
-#                    "- **Company Name:** Extract the name of the company making the payment (it will never be 'Mettler-Toledo').\n"
+#                    "- **Company Name:** Extract the name of the company making the payment (it will never be '').\n"
 #                    "- **Invoice Numbers:** Extract all 9-digit invoice(the name would be either vendor invoice or invoice) numbers (there may be one or multiple invoices),and here strictly it has to be 9 digits.\n"
 #                    "- **Total Amount:** Extract the total payment amount from the document.\n"
 #                    "- **Tax Amount:** Extract the tax amount from the document if it is present.\n"
