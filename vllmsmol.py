@@ -71,7 +71,7 @@ except Exception as e:
 
 
 
-image_folder = r"C:\\Users\\gbsibot-3\\Desktop\\remmitslm\\smolVLM implementation\\images\\"
+image_folder = r""
 
 for filename in os.listdir(image_folder):
     if filename.endswith(('.png','.jpg','.jpeg')):
@@ -94,7 +94,7 @@ for filename in os.listdir(image_folder):
                     "type": "text",
                     "text": (
                         "Please extract the following information from the remittance advices and present it in JSON format: "
-                        "the company name (it will never be Mettler-Toledo), 9-digit invoice numbers (which may be single or multiple), "
+                        "the company name (it will never be ), 9-digit invoice numbers (which may be single or multiple), "
                         "the total amount stated in the document, and the currency used in the document along with individual amounts for each invoice number,the tax amount,Make sure to not bring dummy values , and just the values which are there in the image."
                     )
                 }
