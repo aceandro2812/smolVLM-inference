@@ -8,7 +8,7 @@ import torch
 model_id = "SkalskiP/paligemma2_latex_ocr_v5"
 # MODEL_DIR = ""
 
-url = "C:\\Users\\gbsibot-3\\Desktop\\remmitslm\\smolVLM implementation\\images\\Screenshot 2024-12-13 182051.png"
+url = ""
 # image = load_image(url)
 image = url
 
@@ -29,7 +29,7 @@ messages = [
                 "image": image,
             },
             {"type": "text", "text": ("Please extract the following information from the remittance advices and present it in JSON format: "
-                   "the company name (it will never be Mettler-Toledo), 9-digit invoice numbers (which may be single or multiple), "
+                   "the company name (it will never be ), 9-digit invoice numbers (which may be single or multiple), "
                    "the total amount stated in the document, and the currency used in the document along with individual amounts for each invoice number,the tax amount,Make sure to not bring dummy values , and just the values which are there in the image."
 )},
         ],
