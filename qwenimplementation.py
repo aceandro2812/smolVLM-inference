@@ -21,7 +21,7 @@ processor = AutoProcessor.from_pretrained("prithivMLmods/Qwen2-VL-OCR-2B-Instruc
 # min_pixels = 256*28*28
 # max_pixels = 1280*28*28
 # processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-2B-Instruct", min_pixels=min_pixels, max_pixels=max_pixels)
-image_path = r"C:\\Users\\gbsibot-3\\Desktop\\remmitslm\\smolVLM implementation\\images\\Screenshot 2024-12-13 182051.png"
+image_path = r""
 
 # try:
 #    image1 = load_image(image_path)
@@ -39,7 +39,7 @@ messages = [
                 "image": image_path,
             },
             {"type": "text", "text": ("Please extract the following information from the remittance advices and present it in JSON format: "
-                   "the company name (it will never be Mettler-Toledo), 9-digit invoice numbers (which may be single or multiple), "
+                   "the company name (it will never be ), 9-digit invoice numbers (which may be single or multiple), "
                    "the total amount stated in the document, and the currency used in the document along with individual amounts for each invoice number,the tax amount,Make sure to not bring dummy values , and just the values which are there in the image."
 )},
         ],
