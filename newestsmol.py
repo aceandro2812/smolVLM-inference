@@ -35,7 +35,7 @@ class PDFInvoiceProcessor:
         self.PROCESSOR_DIR = "./smolVLMproc"
         
         # Input and output configurations
-        self.pdf_folder = pdf_folder or r"C:\\Users\\gbsibot-3\\Desktop\\remmitslm\\smolVLM implementation\\images\\"
+        self.pdf_folder = pdf_folder or r""
         self.output_csv = output_csv
         
         # Load model and processor
@@ -115,7 +115,7 @@ class PDFInvoiceProcessor:
                                 "type": "text",
                                 "text": (
                                     "Please extract the following information from the remittance advices and present it in JSON format: "
-                                    "the company name (it will never be Mettler-Toledo), 9-digit invoice numbers (which may be single or multiple), "
+                                    "the company name (it will never be ), 9-digit invoice numbers (which may be single or multiple), "
                                     "the total amount stated in the document, and the currency used in the document along with individual amounts for each invoice number, the tax amount, Make sure to not bring dummy values, and just the values which are there in the image."
                                 )
                             }
@@ -213,7 +213,7 @@ class PDFInvoiceProcessor:
 
 def main():
     processor = PDFInvoiceProcessor(
-        pdf_folder=r"C:\\Users\\gbsibot-3\\Desktop\\remmitslm\\smolVLM implementation\\images\\",
+        pdf_folder=r"",
         output_csv="remmit_extraction.csv"
     )
     processor.process_folder()
